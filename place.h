@@ -1,0 +1,19 @@
+#ifndef PLACE_H
+#define PLACE_H
+
+#include "coin.h"
+#include "command.h"
+#include "mushroom.h"
+#include "bomb.h"
+#include "rock.h"
+#include <iostream>
+
+using namespace std;
+
+class Place : public Command
+{
+public:
+    Place() : Command("place") {};
+    void fire(Cave& c, string userCommand);
+};
+#endif // PLACE_H
